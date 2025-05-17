@@ -1,4 +1,4 @@
-# 🚀 AI Tripmate – Spring Boot Backend
+# 🚀 AI Tripmate – Spring Boot Backend(https://ai-tripmate-ui.onrender.com/)
 
 AI Tripmate is a smart travel companion powered by AI. This Spring Boot backend integrates with Groq's LLaMA models, HuggingFace's image generation, MongoDB, Google OAuth2, Gmail SMTP, and Pexels API to provide features like AI-based trip planning, chat interactions, secure authentication, and dynamic content creation.
 
