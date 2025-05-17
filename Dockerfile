@@ -1,13 +1,23 @@
-# Use Java 21 base image
-FROM eclipse-temurin:21-jdk-alpine
+# Use Maven image to build the application
+FROM eclipse-temurin:21-jdk-alpine as build
 
-# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the jar file built by Maven (assumes you already ran `./mvnw clean install`)
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+# Copy the pom and source code
+COPY pom.xml .
+COPY src ./src
 
+# Install maven and build the app
+RUN apk add --no-cache maven
+RUN mvn clean install -DskipTests
 
-# Run the Spring Boot app
+# Package stage
+FROM eclipse-temurin:21-jdk-alpine
+
+WORKDIR /app
+
+# Copy the built jar from the build stage
+COPY --from=build /app/target/*.jar app.jar
+
+# Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
