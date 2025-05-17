@@ -39,12 +39,19 @@ Check out the live website here:
 
 ## 📁 Project Structure
 ai-tripmate-backend/
+
 ├── src/
+
 │ └── main/
+
 │ └── java/
+
 │ └── resources/
+
 │ └── application.properties
+
 ├── pom.xml
+
 └── README.md
 
 ### Clone the Repository
@@ -110,3 +117,9 @@ http://localhost:8080/swagger-ui/index.html
 ```bash
 git clone https://github.com/shivanshu-kashyap-09/Ai-Tripmate-ui.git
 ```
+#Support / Contact
+For help or feedback, reach out to:
+
+kashyapshivanshu63@gmail.com
+
+https://www.linkedin.com/in/shivanshu-kashyap-18b426244/
