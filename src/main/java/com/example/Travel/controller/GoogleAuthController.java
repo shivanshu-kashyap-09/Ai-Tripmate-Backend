@@ -17,7 +17,7 @@ import java.util.Collections;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "https://ai-tripmate-ui.onrender.com", allowCredentials = "true")
 public class GoogleAuthController {
 	
 	@Value("${spring.security.oauth2.client.registration.google.client-id}")

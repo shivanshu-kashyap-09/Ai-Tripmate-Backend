@@ -20,7 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/public")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "https://ai-tripmate-ui.onrender.com")
+//@CrossOrigin(origins = "http://localhost:5173")
 @Slf4j
 public class PublicController {
 	
